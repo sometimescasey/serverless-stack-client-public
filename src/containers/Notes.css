@@ -1,0 +1,16 @@
+.Notes form {
+    padding-bottom: 15px;
+    }
+  
+.Notes form textarea {
+    height: 300px;
+    font-size: 24px;
+    }
+
+.Notes div.remove-button-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}

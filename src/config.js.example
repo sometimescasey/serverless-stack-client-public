@@ -1,0 +1,48 @@
+// rename to config.js and replace with required values.
+
+const dev = {
+  STRIPE_KEY: "stripe_key",
+  s3: {
+      REGION: "aws-region-1",
+      BUCKET: "my-note-app"
+    },
+    apiGateway: {
+      REGION: "aws-region-1",
+      URL: "https://abcdef123.execute-api.aws-region-1.amazonaws.com/prod"
+    },
+    cognito: {
+      REGION: "aws-region-1",
+      USER_POOL_ID: "aws-region-1_abcDEFg1",
+      APP_CLIENT_ID: "abcDEF457hfg8f",
+      IDENTITY_POOL_ID: "aws-region-1:123456e-ab12-cd34-ab12-0123hfjdkd3"
+    }
+};
+
+const prod = {
+  STRIPE_KEY: "stripe_key",
+  s3: {
+      REGION: "aws-region-1",
+      BUCKET: "my-note-app"
+    },
+    apiGateway: {
+      REGION: "aws-region-1",
+      URL: "https://abcdef123.execute-api.aws-region-1.amazonaws.com/prod"
+    },
+    cognito: {
+      REGION: "aws-region-1",
+      USER_POOL_ID: "aws-region-1_abcDEFg1",
+      APP_CLIENT_ID: "abcDEF457hfg8f",
+      IDENTITY_POOL_ID: "aws-region-1:123456e-ab12-cd34-ab12-0123hfjdkd3"
+    }
+};
+
+// Default to dev if not set
+const config = process.env.REACT_APP_STAGE === 'prod'
+  ? prod
+  : dev;
+
+export default {
+  // Add common config values here
+  MAX_ATTACHMENT_SIZE: 5000000,
+  ...config
+};

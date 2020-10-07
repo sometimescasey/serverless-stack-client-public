@@ -1,0 +1,26 @@
+@media all and (min-width: 480px) {
+    .Login {
+        padding: 60px 0;
+    }
+
+    .Login form {
+        margin: 0 auto;
+        max-width: 320px;
+    }
+
+    .Login.error-message {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 14px;
+        padding-bottom: 10px;
+        color: #C88;
+    }
+}
+
+.Home .lander div {
+    padding-top: 20px;
+  }
+.Home .lander div a:first-child {
+    margin-right: 20px;
+  }
